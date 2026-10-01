@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asisten AI untuk UMKM</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>Asisten AI Laundry</h1>
+      </div>
+      <nav>
+        <a href="#profile">Profile</a>
+        <a href="#fitur">Fitur</a>
+        <a href="#formdata" class="nav-cta">Form</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="profile">
+        <div class="hero-teks">
+          <span class="badge">Solusi Cerdas AI</span>
+          <h2>Profile Layanan</h2>
+          <p>
+            Solusi cerdas berbasis kecerdasan buatan untuk membantu pencatatan
+            keuangan, otomatisasi layanan pelanggan via WhatsApp, dan strategi
+            pemasaran digital bagi pelaku UMKM Laundry.
+          </p>
+          <a href="#formdata" class="btn-hero">Mulai Sekarang</a>
+        </div>
+
+        <div class="hero-gambar">
+          <img src="fotolaundry.jpg" alt="Foto Outlet Laundry" />
+        </div>
+      </section>
+
+      <section id="fitur">
+        <h2>Fitur Layanan Laundry</h2>
+        <div class="grid-fitur">
+          <div class="kartu">
+            <span class="tag-fitur tag-1">Finansial</span>
+            <h3>Pencatatan Keuangan</h3>
+            <p>
+              Rekap timbangan cucian, nota kasir, dan ringkasan laba rugi
+              otomatis tanpa hitung manual.
+            </p>
+          </div>
+
+          <div class="kartu">
+            <span class="tag-fitur tag-2">WhatsApp 24/7</span>
+            <h3>Layanan Pelanggan</h3>
+            <p>
+              Notifikasi otomatis ke WhatsApp pelanggan saat cucian selesai
+              dicuci dan siap diambil.
+            </p>
+          </div>
+
+          <div class="kartu">
+            <span class="tag-fitur tag-3">Marketing</span>
+            <h3>Strategi Pemasaran</h3>
+            <p>
+              Rekomendasi promo cuci bedcover saat musim hujan dan ide konten
+              promosi media sosial.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <form id="formdata" action="#" onsubmit="event.preventDefault()">
+        <h2>Formulir Registrasi Mitra</h2>
+
+        <div class="form-group">
+          <label for="nama">Masukan Nama Anda:</label>
+          <input
+            type="text"
+            id="nama"
+            name="nama"
+            placeholder="Contoh: Andhika Ryan"
+            required
+          />
+        </div>
+
+        <fieldset>
+          <legend>Jenis Kelamin</legend>
+          <div class="radio-group">
+            <label class="radio-item">
+              <input type="radio" name="jk" id="pria" value="pria" required />
+              <span>Pria</span>
+            </label>
+            <label class="radio-item">
+              <input type="radio" name="jk" id="wanita" value="wanita" />
+              <span>Wanita</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="btn-submit">Kirim Data</button>
+      </form>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Praktikum PAW — Asisten AI untuk UMKM</p>
+    </footer>
+  </body>
+</html>

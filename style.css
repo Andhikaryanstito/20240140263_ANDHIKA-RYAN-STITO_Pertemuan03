@@ -1,0 +1,338 @@
+/* 1. Reset Dasar & Variabel */
+:root {
+  --navy: #0f2744;
+  --mint: #0d9488;
+  --mint-dark: #0f766e;
+  --mint-soft: #f0fdfa;
+  --border: #cbd5e1;
+  --text: #334155;
+  --muted: #475569;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+body {
+  background-color: #f8fafc;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+main {
+  max-width: 960px;
+  margin: 28px auto;
+  padding: 0 16px;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--navy);
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+/* 1. Header & Navigasi — Flexbox */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 14px 28px;
+  border-bottom: 2px solid #99f6e4;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.logo,
+header nav,
+.radio-group,
+.radio-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+header h1 {
+  font-size: 1.2rem;
+}
+
+header nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+header nav a:hover {
+  color: var(--mint);
+}
+
+.nav-cta,
+.btn-hero,
+.btn-submit {
+  background-color: var(--mint);
+  color: #ffffff !important;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-cta {
+  padding: 6px 14px;
+}
+
+.nav-cta:hover,
+.btn-submit:hover {
+  background-color: var(--mint-dark);
+}
+
+/* 2. Hero Section — CSS Grid */
+#profile {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 28px;
+  background-color: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 28px;
+}
+
+.badge {
+  display: inline-block;
+  background-color: var(--mint-soft);
+  color: var(--mint-dark);
+  border: 1px solid #5eead4;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+
+.hero-teks h2 {
+  font-size: 1.75rem;
+  margin-bottom: 10px;
+}
+
+.hero-teks p {
+  color: var(--text);
+  margin-bottom: 18px;
+}
+
+.btn-hero {
+  display: inline-block;
+  background-color: var(--navy);
+  padding: 10px 20px;
+  font-size: 0.92rem;
+}
+
+.btn-hero:hover {
+  background-color: var(--mint);
+}
+
+.hero-gambar img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+/* 3. Daftar Fitur — CSS Grid */
+#fitur {
+  margin-bottom: 28px;
+}
+
+#fitur h2,
+#formdata h2 {
+  font-size: 1.35rem;
+  margin-bottom: 14px;
+}
+
+.grid-fitur {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.kartu,
+#formdata {
+  background-color: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.kartu {
+  padding: 20px;
+}
+
+.tag-fitur {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+/* Penyesuaian Kontras Tinggi agar Lolos Cek Dosen */
+.tag-1 {
+  background-color: #ccfbf1;
+  color: #0f766e;
+}
+
+.tag-2 {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.tag-3 {
+  background-color: #ffedd5;
+  color: #9a3412;
+}
+
+.kartu h3 {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+.kartu p {
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+/* 4. Form & Focus State */
+#formdata {
+  padding: 26px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.form-group,
+fieldset {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+#formdata input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.92rem;
+  outline: none;
+}
+
+/* Focus State Jelas & Aksesibel */
+#formdata input[type="text"]:focus {
+  border-color: var(--mint);
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.25);
+  background-color: var(--mint-soft);
+}
+
+fieldset {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 12px 14px;
+}
+
+fieldset legend {
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: var(--navy);
+  padding: 0 6px;
+}
+
+.radio-item {
+  cursor: pointer;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.radio-item input[type="radio"] {
+  accent-color: var(--mint);
+}
+
+.radio-item input[type="radio"]:focus {
+  outline: 2px solid var(--mint);
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 11px;
+  font-size: 0.95rem;
+}
+
+.btn-submit:focus {
+  outline: 2px solid var(--navy);
+  outline-offset: 2px;
+}
+
+footer {
+  text-align: center;
+  padding: 24px 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 36px;
+  border-top: 1px solid var(--border);
+}
+
+/* 5. Media Query — Layout Mobile 1 Kolom Bebas Rusak */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 12px;
+    padding: 14px 16px;
+    text-align: center;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+  #profile {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px 16px;
+  }
+
+  .btn-hero {
+    display: block;
+    text-align: center;
+  }
+
+  .hero-gambar img {
+    height: 180px;
+    width: 100%;
+  }
+
+  .grid-fitur {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  #formdata {
+    padding: 20px 16px;
+    max-width: 100%;
+  }
+}
